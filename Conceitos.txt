@@ -1,0 +1,72 @@
+Aqui estão as respostas para as questões:
+
+Qual o modificador de acesso padrão para membros de uma classe?
+Resposta: c) private
+
+Qual termo se usa para a técnica de criar duas funções com o mesmo nome porém com parâmetros diferentes?
+Resposta: b) Overloading (Sobrecarga)
+
+Precisamos impedir que o método Calc() da classe A seja sobrescrito por quem herdar a classe B. Qual modificador usar além de override?
+Resposta: e) sealed
+
+Queremos criar uma classe que possui métodos sem implementação. Que modificador devemos usar para a classe e métodos?
+Resposta: a) abstract
+
+Qual modificador de acesso permite que um membro seja acessado somente por classes descendentes?
+Resposta: c) protected
+
+Uma opção para sincronizar o acesso de diferentes threads a um trecho de código fonte seria:
+Resposta: a) lock(lockObject) { }
+
+C# suporta herança múltipla de classes?
+Resposta: b) Não
+
+C# suporta que uma classe implemente mais de uma Interface?
+Resposta: a) Sim
+
+Consulta LINQ para retornar a primeira pessoa com mais de 30 anos:
+
+var pessoa = listaPessoas.FirstOrDefault(p => p.Idade > 30);
+
+Um evento (Event) tem sempre o mesmo tipo de retorno:
+Resposta: d) Eventos não retornam valores
+
+No código [Serializable] antes da classe, o que isso representa?
+Resposta: b) é um atributo de classe
+
+Em runtime, como acessar métodos, propriedades e atributos de uma classe não conhecida em design-time?
+Resposta: c) Reflection
+
+O que será impresso ao chamar ImprimeMedia()?
+ class Aluno
+ {
+ public string Nome;
+ public double NotaFinal;
+ }
+ class Media
+ {
+ public void ImprimeMedia()
+ {
+ var aluno = new Aluno { Nome = "André", NotaFinal = 4 };
+ string conceito = "NAO DEFINIDO";
+ CalculaMedia(aluno, conceito);
+ Console.WriteLine(aluno.Nome + ", " + aluno.NotaFinal + ", " + conceito);
+ }
+ private void CalculaMedia(Aluno aluno, string conceito)
+ {
+ aluno.NotaFinal += 4;
+ if (aluno.NotaFinal >= 6)
+ conceito = "APROVADO";
+ else
+ conceito = "REPROVADO";
+ }
+ }
+Resposta: a) André, 8, NAO DEFINIDO
+
+O valor de NotaFinal é alterado porque Aluno é um objeto (referência).
+conceito não é alterado pois strings são passadas por valor.
+Atributo usado para expor uma interface via WCF:
+Resposta: b) DataContract
+
+Entity Framework suporta PK, FK e relacionamento Muitos-para-Muitos?
+Resposta: a) Sim
